@@ -628,7 +628,9 @@ var Neela;
             if ($(".timeline-gallery").length) {
                 $(".timeline-gallery").owlCarousel({
                     nav: true,
-                    dots: false,
+                    dots: true,
+                    autoplay: true,
+                    loop: true,
                     responsive: {
                         "0": {
                             items: 1
