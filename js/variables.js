@@ -56,7 +56,7 @@ var map_markers = [
         "latitude": 41.966689,
         "longitude": 12.800411,
         "icon": "fas fa-glass-cheers", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Ristorante Sibilla<br>Via della Sibilla, Tivoli"
+        "infoWindow": "Ristorante Sibilla<br>Via della Sibilla 42, Tivoli"
     },
     // {
     //     "title": "Accommodation 1",
@@ -90,7 +90,21 @@ var map_markers = [
         "title": "Cerimonia",
         "latitude": 41.962366,
         "longitude": 12.797098,
-        "icon": "fas fa-bell", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
+        "icon": "far fa-heart", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
         "infoWindow": "Villa D'Este<br/>Piazza Trento, Tivoli"
+    },
+    {
+        "title": "Parcheggio",
+        "latitude": 41.960289,
+        "longitude": 12.799245,
+        "icon": "fas fa-parking",
+        "infoWindow": "Parcheggio Matteotti<br/>Piazzale Matteotti, Tivoli",
+    },
+    {
+        "title": "Parcheggio",
+        "latitude": 41.965195,
+        "longitude": 12.800728,
+        "icon": "fas fa-parking",
+        "infoWindow": "Parcheggio Piazza Massimo<br/>Via dei Sosii, Tivoli",
     }
 ];
