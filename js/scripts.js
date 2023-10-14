@@ -580,7 +580,7 @@ var Neela;
                         anchor: 8,
                         anchorPoint: new google.maps.Point(0, -50),
                         shadow: "none",
-                        content: "<div class=\"marker\"><i class=\"fa " + icon + "\"></i></div>"
+                        content: "<div class=\"marker\" style=\"border: 2px solid #ff0000;\"><i class=\"fa " + icon + "\"></i></div>"
                     });
 
                     google.maps.event.addListener(marker, "click", function () {

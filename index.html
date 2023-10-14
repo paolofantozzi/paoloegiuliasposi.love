@@ -56,6 +56,33 @@
 		.visually-spaced {
 			padding-left: 1%;
 		}
+
+		.outboh {
+			color: var(--bs-white);
+			background-color: var(--bs-info);
+			border-color: var(--bs-info);
+		}
+
+		#btn-back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			display: none;
+			z-index: 3;
+			color: var(--bs-white);
+			border-color: var(--bs-white);
+			background-color: #8eaeba;
+		}
+
+		#btn-scroll-down {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 3;
+			color: var(--bs-white);
+			border-color: var(--bs-white);
+			background-color: #8eaeba;
+		}
 	</style>
 </head>
 
@@ -125,6 +152,14 @@
 			</div>
 		</section>
 		<!-- END HERO SECTION -->
+
+		<button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+
+		<button type="button" class="btn btn-floating btn-lg" id="btn-scroll-down">
+			<i class="fas fa-arrow-down"></i> Scorri la pagina
+		</button>
 
 		<!-- BEGIN ABOUT US SECTION -->
 		<section id="about-us">
@@ -617,7 +652,7 @@
 													<button class="btn btn-primary text-light text-center"
 														onclick="copyContent()" id="copyButton">Copia</button> <br>
 												</div>
-												
+
 												<!-- <span>IT13</span><span class="visually-spaced">R020</span><span class="visually-spaced">0839</span><span class="visually-spaced">4520</span><span class="visually-spaced">0010</span><span class="visually-spaced">6878</span><span class="visually-spaced">954</span><br> -->
 												Intestato a<br>
 												Giulia Lattanzi e Paolo Fantozzi
@@ -679,7 +714,7 @@
 								style="display: flex; justify-content: center;">
 								<iframe
 									src="https://docs.google.com/forms/d/e/1FAIpQLScNwq9jqxHTDOaUtgki3c3QPWzrcj3SDD0FQYirt-MG2k3CYw/viewform?embedded=true"
-									width="640" height="1400" frameborder="0" marginheight="0" marginwidth="0"
+									width="640" height="1600" frameborder="0" marginheight="0" marginwidth="0"
 									style="position: relative; z-index: 1;">Caricamento…</iframe>
 							</div>
 
@@ -856,6 +891,36 @@
 				console.error('Failed to copy: ', err);
 			}
 		}
+
+		//Get the button
+		let scrollbuttonup = document.getElementById("btn-back-to-top");
+		let scrollbuttondown = document.getElementById("btn-scroll-down");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				scrollbuttonup.style.display = "block";
+				scrollbuttondown.style.display = "none";
+			} else {
+				scrollbuttonup.style.display = "none";
+				scrollbuttondown.style.display = "block";
+			}
+		}
+
+		function backToTop() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		scrollbuttonup.addEventListener("click", backToTop);
 	</script>
 
 
