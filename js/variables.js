@@ -16,8 +16,8 @@ var hero_full_screen = true;                    //If true, the hero section will
 
 //HERO BACKGROUND SLIDESHOW IMAGES
 var slidehow_images = [
-    "images/slideshow1.jpg",
     "images/slideshow2.jpg",
+    "images/slideshow1.jpg",
     "images/slideshow3.jpg",
     "images/slideshow4.jpg",
     "images/slideshow5.jpg"
