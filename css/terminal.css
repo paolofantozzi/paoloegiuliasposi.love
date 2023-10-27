@@ -3,7 +3,7 @@ form {
 }
 body .shell {
     width: 600px;
-    height: 400px;
+    height: 800px;
 }
 body .shell .terminal {
     height: calc(100% - 29px);
